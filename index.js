@@ -28,7 +28,7 @@ const handleSendEmail = () => {
         },
         Text: {
           Charset: 'UTF-8',
-          Data: `This message has heyyyyy sexy berto been sent from TEXT ${senderEmail}`
+          Data: `This message sent from TEXT ${senderEmail}`
         }
       },
       Subject: {
