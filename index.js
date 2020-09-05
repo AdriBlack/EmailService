@@ -1,16 +1,18 @@
-
-// Load the SDK and UUID
+require('dotenv').config({path: __dirname + '/.env'})
 const AWS = require('aws-sdk');
-// const uuid = require('node-uuid');
+const SES = new AWS.SES()
 
+const senderEmail = process.env.SENDER_EMAIL
+const recieverEmail = process.env.RECEIVER_EMAIL
 
-// Create an SES service
-const SES =  new AWS.SES({
-  region: 'us-west-2'
+AWS.config.update({
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env. AWS_REGION
 })
 
-const senderEmail = 'adrianablackb@gmail.com'
-const recieverEmail = 'adrianablackb@gmail.com'
+
+
 
 const handleSendEmail = () => {
   const params = {
@@ -31,7 +33,7 @@ const handleSendEmail = () => {
       },
       Subject: {
         Charset: 'UTF-8',
-        Data: `This SUBJECT NEW APP has been sent from  ${senderEmail}`
+        Data: `This SUBJECT TADAh! YEA! has been sent from  ${senderEmail}`
       }
     }
   }
@@ -46,5 +48,3 @@ const handleSendEmail = () => {
 }
 
 handleSendEmail()
-
-// console.log(process.env)
