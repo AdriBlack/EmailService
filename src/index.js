@@ -1,10 +1,14 @@
+import express from 'express'
 
-require('dotenv').config({path: __dirname + '/.env'})
-const express = require('express')
+import dotenv from 'dotenv'
+// dotenv.config({path: __dirname + '/.env'})
+dotenv.config()
+
+import routes from './routes/index.js'
 const app = express()
 const port = 3000
 
-const routes = require('./routes/index')
+// const routes = require('./routes/index')
 
 app.use('/api', routes)
 

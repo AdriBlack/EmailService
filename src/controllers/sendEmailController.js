@@ -1,5 +1,5 @@
-const { sendEmailService } = require('../services')
-const { handleSendEmail } = sendEmailService
+import { sendEmailService } from '../services'
+// const { handleSendEmail } = sendEmailService
 
 const sendEmailController = async (req, res, next) => {
     try {
