@@ -1,18 +1,17 @@
-import { sendEmailService } from '../services'
-// const { handleSendEmail } = sendEmailService
+import sendEmailService  from '../services/sendEmailService.js'
+
 
 const sendEmailController = async (req, res, next) => {
     try {
         console.log('hello')
-        // await handleSendEmail()
-        // res.sendStatus(201)
-        // next()
+        await sendEmailService.handleSendEmail()
+        console.log('goodbye')
+        res.sendStatus(201)
+        next()
     } catch(e) {
         console.log(e.message)
         res.sendStatus(500) && next(error)
     }
 }
 
-module.exports = {
-    sendEmailController
-}
+export default sendEmailController

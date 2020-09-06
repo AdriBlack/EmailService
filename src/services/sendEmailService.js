@@ -1,4 +1,5 @@
-const AWS = require('aws-sdk');
+import AWS from 'aws-sdk'
+
 const SES = new AWS.SES()
 
 const senderEmail = process.env.SENDER_EMAIL
@@ -30,7 +31,7 @@ const handleSendEmail = () => {
       },
       Subject: {
         Charset: 'UTF-8',
-        Data: `This SUBJECT TADAh! YEA! has been sent from  ${senderEmail}`
+        Data: `This SUBJECT THIS WORKS! has been sent from  ${senderEmail}`
       }
     }
   }
@@ -44,6 +45,7 @@ const handleSendEmail = () => {
     })
 }
 
-module.exports = {
-    handleSendEmail
+
+export default {
+  handleSendEmail: handleSendEmail()
 }

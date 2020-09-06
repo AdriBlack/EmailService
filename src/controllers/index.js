@@ -1,21 +1,2 @@
-import sendEmailController from './sendEmailController'
+import sendEmailController from './sendEmailController.js'
 export default sendEmailController
-// // const { sendEmailService } = require('../services')
-// import sendEmailService from '../services'
-// // const { handleSendEmail } = sendEmailService
-
-// const sendEmailController = async (req, res, next) => {
-//     try {
-//         console.log('hello')
-//         await sendEmailService.handleSendEmail()
-//         res.sendStatus(201)
-//         next()
-//     } catch(e) {
-//         console.log(e.message)
-//         res.sendStatus(500) && next(error)
-//     }
-// }
-
-// module.exports = {
-//     sendEmailController
-// }

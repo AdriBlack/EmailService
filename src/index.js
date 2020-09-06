@@ -4,7 +4,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 dotenv.config()
 
-import routes from './routes/index'
+import routes from './routes/index.js'
 const app = express()
 const port = 3000
 
