@@ -1,16 +1,33 @@
 {
   "name": "emailservice",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/node": "^7.10.5",
     "aws-sdk": "^2.747.0",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
     "uuid": "^8.3.0"
-  }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdriBlack/EmailService.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdriBlack/EmailService/issues"
+  },
+  "homepage": "https://github.com/AdriBlack/EmailService#readme",
+  "description": ""
 }

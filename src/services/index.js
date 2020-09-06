@@ -1,4 +1,6 @@
-require('dotenv').config({path: __dirname + '/.env'})
+// import sendEmailService from './sendEmailService'
+// export default sendEmailService
+
 const AWS = require('aws-sdk');
 const SES = new AWS.SES()
 
@@ -10,8 +12,6 @@ AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     region: process.env. AWS_REGION
 })
-
-
 
 
 const handleSendEmail = () => {
@@ -47,4 +47,6 @@ const handleSendEmail = () => {
     })
 }
 
-handleSendEmail()
+module.exports = {
+    handleSendEmail
+}
