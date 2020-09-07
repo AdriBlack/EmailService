@@ -1,10 +1,7 @@
 import express from 'express'
-
-
-import dotenv from 'dotenv'
-dotenv.config()
-
+import _ from './env.js'
 import routes from './routes/index.js'
+
 const app = express()
 const port = 3000
 

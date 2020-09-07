@@ -15,7 +15,7 @@ AWS.config.update({
 const handleSendEmail = () => {
   const params = {
     Source: senderEmail,
-    Destination : {
+    Destination: {
       ToAddresses: [recieverEmail]
     },
     Message: {
